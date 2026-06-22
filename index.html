@@ -1,75 +1,201 @@
-<html>
-<body BGCOLOR="#FFF8DC">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princetype | Flipkart Style Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f1f3f6;
+        }
+        /* Navbar Design */
+        header {
+            background-color: #2874f0;
+            padding: 12px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+        }
+        .search-container {
+            flex: 0.6;
+            display: flex;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 2px 0 0 2px;
+            outline: none;
+        }
+        .search-container button {
+            background-color: white;
+            border: none;
+            padding: 0 15px;
+            color: #2874f0;
+            cursor: pointer;
+            border-radius: 0 2px 2px 0;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+        /* Banner Style */
+        .banner {
+            width: 90%;
+            margin: 15px auto;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Product Section */
+        .main-container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+            background: white;
+        }
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #212121;
+            margin: 5px 0;
+        }
+        .product-price {
+            color: #388e3c;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .original-price {
+            color: #878787;
+            text-decoration: line-through;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+        .buy-btn {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Top Navigation Bar -->
+    <header>
+        <a href="#" class="logo">Princetype</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+        <div class="nav-links">
+            <a href="#" style="background: white; color: #2874f0; padding: 5px 20px; border-radius: 2px;">Login</a>
+            <a href="#">Become a Seller</a>
+            <a href="#">🛒 Cart</a>
+        </div>
+    </header>
 
+    <!-- Main Offer Banner -->
+    <div class="banner">
+        <h1>Welcome to Princetype</h1>
+        <p>Big Summer Sale is Live! Get up to 60% Off on Top Brands.</p>
+    </div>
 
+    <!-- Product Grid Section -->
+    <div class="main-container">
+        <div class="section-title">Trending Deals of the Day</div>
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Running Shoes">
+                <div class="product-title">Premium Sports Shoes</div>
+                <div class="product-price">₹1,499 <span class="original-price">₹2,999</span></div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
 
-<PRE>                                                                                                                                                           <BUTTON>LOGIN</BUTTON> <BUTTON>CART</BUTTON> <BUTTON>ODER</BUTTON></PRE>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
+                <div class="product-title">Wireless Bass Headphones</div>
+                <div class="product-price">₹999 <span class="original-price">₹1,999</span></div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
 
-<center><img src="C:\Users\HP\Desktop\NEW FOLDER (2)\0.1.png"<font size=15px> 
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Smart Watch">
+                <div class="product-title">Smart Fitness Watch Pro</div>
+                <div class="product-price">₹2,499 <span class="original-price">₹4,999</span></div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
 
-<BR><BR>
-<input type="search" placeholder="search you item" style="width:300px; height:40px;font-size:18px"><BUTTON>SEARCH</BUTTON></PRE>
-<hr>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Controller">
+                <div class="product-title">Gaming Controller Wireless</div>
+                <div class="product-price">₹1,249 <span class="original-price">₹2,499</span></div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
 
-<img src="C:\Users\HP\Desktop\New folder (2)\0.3.jfif" width="1250px" height="500px">
-<HR>
-  
-<br>
+        </div>
+    </div>
 
-<br>
-<br>
-<table border="5px" width="550px">
-<tr>
-
-<td><center>Cloths</td>
-<td><center>electronic </td>
-<td><center>grocery</td>
-<td><center> accessories</td>
-</tr></table>
-<br>
-<br>
-<br>
-<h2 STYLE="FONT-SIZE:60PX;">welcome to Flipkart</h2>
-<p STYLE="FONT-SIZE:40PX;">best deals Available here</p>
-<fieldset>
-<legend>Cloths</legend>
-<marquee>
-<img src="C:\Users\HP\Desktop\New folder (2)\11.jfif" >
-<img src="C:\Users\HP\Desktop\New folder (2)\22.jfif">
-<img src="C:\Users\HP\Desktop\New folder (2)\33.jfif" >
-<img src="C:\Users\HP\Desktop\New folder (2)\44.jfif" >
-</fieldset></marquee>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<fieldset>
-
-<legend>electronic </legend><marquee>
-<img src="C:\Users\HP\Desktop\41.jfif" >
-<img src="C:\Users\HP\Desktop\42.jfif">
-<img src="C:\Users\HP\Desktop\43.jfif" >
-<img src="C:\Users\HP\Desktop\44.jfif" >
-</fieldset></marquee>
-<fieldset>
-<legend>grocery</legend><marquee>
-<img src="C:\Users\HP\Desktop\45.jfif" >
-<img src="C:\Users\HP\Desktop\46.jfif">
-<img src="C:\Users\HP\Desktop\47.jfif" >
-<img src="C:\Users\HP\Desktop\48.jfif" >
-</fieldset></marquee>
-<fieldset>
-
-<legend>electronic </legend><marquee>
-<img src="C:\Users\HP\Desktop\51.jfif" >
-<img src="C:\Users\HP\Desktop\52.jfif">
-<img src="C:\Users\HP\Desktop\53.jfif" >
-<img src="C:\Users\HP\Desktop\54.jfif" >
-</fieldset></marquee>
-<fieldset>
-<hr>
-<footer STYLE="FONT-SIZE:30PX;">
-Contact Us About Us
-</footer>
+</body>
+</html>
